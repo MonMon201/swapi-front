@@ -1,0 +1,12 @@
+@import 'variables';
+%sizes {
+  min-width: 150px;
+  width: auto;
+  max-width: 800px;
+}
+
+%frames {
+  padding: 1em;
+  margin: 2em auto;
+  border: #ccc 1px dotted;
+}

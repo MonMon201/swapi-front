@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
   p: string;
@@ -28,9 +27,11 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<Names[]>(`${environment.API_URL}`).subscribe((names) => {
+      let opt = this.options
       for (const name of names) {
-        this.options[this.options.length] = name.name;
+        opt[opt.length] = name.name;
       }
+      this.options = opt.sort();
     });
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -57,7 +58,7 @@ export class SearchComponent implements OnInit {
         } else {
           this.person = person[0];
           this.p = `${ this.person.name } is from ${ this.person.homeworld }.
-          ${ this.person.name } is a ${ this.person.gender } character.`
+          ${ this.person.name } is a ${ this.person.gender } gender character.`
         }
       });
   }

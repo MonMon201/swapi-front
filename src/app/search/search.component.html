@@ -1,6 +1,4 @@
-<p>
-  {{ p }}
-</p>
+<h1>Search person by name</h1>
 <form (ngSubmit)="submit()">
   <mat-form-field class="full-width">
     <input
@@ -21,3 +19,7 @@
   </mat-form-field>
   <button color="primary" mat-raised-button type="submit">Search</button>
 </form>
+<h3 *ngIf="p">Results</h3>
+<p>
+  {{ p }}
+</p>

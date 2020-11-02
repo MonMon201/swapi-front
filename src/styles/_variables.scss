@@ -1,0 +1,10 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+:root {
+  /// MAIN COLORS
+  #{--COLOR_LINE}: #ccc;
+  // FONTS
+  #{--MAIN_FONT}: Roboto, 'Helvetica Neue', sans-serif;
+  // MARGINS
+  #{--DEFAULT_MARGIN}: 1em auto;
+  #{--MEDIA_MARGIN}: 2em;
+}
