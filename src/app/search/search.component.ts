@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  p: string;
   form: FormGroup;
   myControl = new FormControl();
   options: string[] = [];
@@ -47,11 +48,17 @@ export class SearchComponent implements OnInit {
 
   submit(): void {
     this.http
-      .get<[Person]>(`${environment.API_URL}/search-people`, {
+      .get<Person[]>(`${environment.API_URL}/search-people`, {
         params: new HttpParams().set('name', this.myControl.value),
       })
       .subscribe((person) => {
-        this.person = person[0];
+        if(person[0] === undefined){
+          this.p = ``;
+        } else {
+          this.person = person[0];
+          this.p = `${ this.person.name } is from ${ this.person.homeworld }.
+          ${ this.person.name } is a ${ this.person.gender } character.`
+        }
       });
   }
 }
