@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+  height: 100%; 
+}
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  width: initial;
+  padding: 1rem;
+  margin: 2rem auto;
+  border: #ccc 1px dotted;
+}
+form{
+  margin: 1rem auto;
+  min-width: 150px;
+  max-width: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    margin: 2rem;
+  }
+}
