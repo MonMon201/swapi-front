@@ -7,17 +7,9 @@ import { SearchComponent } from './search/search.component';
 import { MaterialModule } from './shared/modules/material.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SearchComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule
-  ],
+  declarations: [AppComponent, SearchComponent],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, MaterialModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

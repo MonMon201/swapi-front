@@ -1,5 +1,5 @@
-export interface person {
-    homeworld: string,
-    name: string,
-    gender: string,    
+export interface Person {
+  homeworld: string;
+  name: string;
+  gender: string;
 }

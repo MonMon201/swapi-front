@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { 
-  height: 100%; 
+html,
+body {
+  height: 100%;
 }
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
   margin: 2rem auto;
   border: #ccc 1px dotted;
 }
-form{
+form {
   margin: 1rem auto;
   min-width: 150px;
   max-width: auto;

@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build --prod",
+    "test": "ng test --no-watch --browsers ChromeHeadless --code-coverage",
+    "test:ci": "ng test --no-watch --browsers ChromeHeadless",
+    "lint": "ng lint --fix",
+    "e2e": "ng e2e",
+    "prettier": "prettier --write ."
   },
   "private": true,
   "dependencies": {

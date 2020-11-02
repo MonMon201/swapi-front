@@ -1,24 +1,25 @@
 <h2>{{ person.name }}</h2>
-<p>{{ person.name }} is from {{ person.homeworld }} far far away. 
-  {{ person.name }} is a {{ person.gender }} character.</p>
+<p>
+  {{ person.name }} is from {{ person.homeworld }} far far away.
+  {{ person.name }} is a {{ person.gender }} character.
+</p>
 <form (ngSubmit)="submit()">
   <mat-form-field class="full-width">
-    <input type="text"
-           placeholder="Pick one"
-           matInput
-           [formControl]="myControl"
-           [matAutocomplete]="auto">
+    <input
+      type="text"
+      placeholder="Pick one"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{option}}
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-  <button
-      color="primary"
-      mat-raised-button
-      type="submit"
-    >
-      Search
-    </button>
+  <button color="primary" mat-raised-button type="submit">Search</button>
 </form>

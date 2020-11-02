@@ -4,7 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http'
     MatButtonModule,
     MatToolbarModule,
     MatAutocompleteModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     MatInputModule,
